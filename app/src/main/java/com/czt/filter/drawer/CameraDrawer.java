@@ -7,6 +7,8 @@ import android.opengl.EGL14;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.czt.filter.filters.AFilter;
 import com.czt.filter.filters.CameraFilter;
@@ -365,7 +367,11 @@ public class CameraDrawer implements GLSurfaceView.Renderer {
      * @param lisenter
      */
     public void setStopRecordLisenter(RecordStopLisenter lisenter) {
-        videoEncoder.setStopRecordLisenter(lisenter);
+        if(videoEncoder != null) {
+            videoEncoder.setStopRecordLisenter(lisenter);
+        }else {
+            Log.i("why", "坎坎坷坷扩扩扩扩扩扩扩扩扩扩扩");
+        }
     }
     /*public Bitmap createBitmapFromGLSurface() {
         int bitmapBuffer[] = new int[width * height];
