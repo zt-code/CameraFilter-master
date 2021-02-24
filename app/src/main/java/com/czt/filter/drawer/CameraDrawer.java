@@ -367,11 +367,7 @@ public class CameraDrawer implements GLSurfaceView.Renderer {
      * @param lisenter
      */
     public void setStopRecordLisenter(RecordStopLisenter lisenter) {
-        if(videoEncoder != null) {
-            videoEncoder.setStopRecordLisenter(lisenter);
-        }else {
-            Log.i("why", "坎坎坷坷扩扩扩扩扩扩扩扩扩扩扩");
-        }
+        videoEncoder.setStopRecordLisenter(lisenter);
     }
     /*public Bitmap createBitmapFromGLSurface() {
         int bitmapBuffer[] = new int[width * height];
